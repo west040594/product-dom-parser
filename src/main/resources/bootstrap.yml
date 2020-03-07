@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: rewiew-dom-parser
+
+  cloud:
+    consul:
+      enabled: false
+      discovery:
+        enabled: false
+        instance-id: ${spring.application.name}
+        health-check-interval: 15s

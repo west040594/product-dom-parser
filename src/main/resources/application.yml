@@ -1,0 +1,30 @@
+server:
+  port: 8084
+
+
+
+rabbit:
+  product-info:
+    exchange: REVIEW.PARSE
+    inQueue: REVIEW.PARSE.RQ
+    outQueue: REVIEW.PARSE.RS
+
+
+hystrix:
+  command:
+    default:
+      circuitBreaker:
+        enabled: false
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: west223
+    password: westwest223
+    listener:
+      simple:
+        concurrency: 1
+
+services:
+  selenium: http://localhost:4444/wd/hub

@@ -1,0 +1,6 @@
+spring:
+  rabbitmq:
+    host: rabbitmq
+
+services:
+  selenium: http://selenium-hub:4444/wd/hub
