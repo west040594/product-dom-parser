@@ -1,14 +1,11 @@
 server:
   port: 8084
 
-
-
 rabbit:
   product-info:
     exchange: REVIEW.PARSE
     inQueue: REVIEW.PARSE.RQ
     outQueue: REVIEW.PARSE.RS
-
 
 hystrix:
   command:
@@ -25,6 +22,10 @@ spring:
     listener:
       simple:
         concurrency: 1
+
+logging:
+  pattern:
+    console: "%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level %logger{15} - %msg%n"
 
 services:
   selenium: http://localhost:4444/wd/hub
